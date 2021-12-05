@@ -8,13 +8,32 @@ const questions = [
         type: 'input',
         name: 'project',
         message: 'What is the name of your project? (Required)',
-        validate: projectInput => {if (projectInput){return true} else{console.log('Please enter the name of your project!'); return false;}}
+        validate: nameInput => {if (nameInput){return true} else{console.log('Please enter the name of your project!'); return false;}}
     },
     {
         type: 'input',
-        name: 'name',
-        message: 'What is the name of your project? (Required)',
-        validate: nameInput => {if (nameInput){return true} else{console.log('Please enter the name of your project!'); return false;}}
+        name: 'GitHub Username',
+        message: 'What is your GitHub user name? (Required)',
+        validate: nameInput => {if (nameInput){return true} else{console.log('Please enter your GitHub user name!'); return false;}}
+    },
+    {
+        type: 'input',
+        name: 'Description',
+        message: 'Please provide a description of your project (Required)',
+        validate: nameInput => {if (nameInput){return true} else{console.log('You must enter a description of your project!'); return false;}}
+    },
+    {
+        type: 'input',
+        name: 'credits',
+        message: 'Any credits? (Required)',
+        validate: nameInput => {if (nameInput){return true} else{console.log('Please enter a value!'); return false;}}
+    },
+    {
+        type: 'list',
+        name: 'license',
+        message: 'Which license(s) were used? (Required)',
+        choices: ['The MIT license', 'The GPL License', 'Apache License'],
+        validate: nameInput => {if (nameInput){return true} else{console.log('Please enter a value!'); return false;}}
     },
 
 ];
