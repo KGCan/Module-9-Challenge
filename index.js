@@ -6,17 +6,17 @@ const fs = require('fs')
 const questions = [
     {
         type: 'input',
+        name: 'project',
+        message: 'What is the name of your project? (Required)',
+        validate: projectInput => {if (projectInput){return true} else{console.log('Please enter the name of your project!'); return false;}}
+    },
+    {
+        type: 'input',
         name: 'name',
         message: 'What is the name of your project? (Required)',
-        validate: nameInput => {
-            if (nameInput) {
-                return true;
-                } else{
-                    console.log('Please enter the name of your project!');
-                    return false;
-                }
-        }
-    }
+        validate: nameInput => {if (nameInput){return true} else{console.log('Please enter the name of your project!'); return false;}}
+    },
+
 ];
 
 // TODO: Create a function to write README file
