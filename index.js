@@ -12,20 +12,26 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'GitHub Username',
-        message: 'What is your GitHub user name? (Required)',
-        validate: nameInput => {if (nameInput){return true} else{console.log('Please enter your GitHub user name!'); return false;}}
-    },
-    {
-        type: 'input',
         name: 'Description',
-        message: 'Please provide a description of your project (Required)',
+        message: 'Please provide a description of your project: (Required)',
         validate: nameInput => {if (nameInput){return true} else{console.log('You must enter a description of your project!'); return false;}}
     },
     {
         type: 'input',
-        name: 'credits',
-        message: 'Any credits? (Required)',
+        name: 'installation',
+        message: 'Please provide instructions for installation: (Required)',
+        validate: nameInput => {if (nameInput){return true} else{console.log('You must enter a description of your project!'); return false;}}
+    },
+    {
+        type: 'input',
+        name: 'usage',
+        message: 'How do you use your app? (Required)',
+        validate: nameInput => {if (nameInput){return true} else{console.log('Please enter a value!'); return false;}}
+    },
+    {
+        type: 'input',
+        name: 'contributions',
+        message: 'Contribution guidelines: (Required)',
         validate: nameInput => {if (nameInput){return true} else{console.log('Please enter a value!'); return false;}}
     },
     {
@@ -35,6 +41,19 @@ const questions = [
         choices: ['The MIT license', 'The GPL License', 'Apache License'],
         validate: nameInput => {if (nameInput){return true} else{console.log('Please enter a value!'); return false;}}
     },
+    {
+        type: 'input',
+        name: 'GitHub',
+        message: 'What is your GitHub username? (Required)',
+        validate: nameInput => {if (nameInput){return true} else{console.log('Please enter a value!'); return false;}}
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'What is your email? (Required)',
+        validate: nameInput => {if (nameInput){return true} else{console.log('Please enter a value!'); return false;}}
+    },
+
 
 ];
 
