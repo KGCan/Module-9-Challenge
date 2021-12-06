@@ -20,13 +20,13 @@ const questions = [
         type: 'input',
         name: 'installation',
         message: 'Please provide instructions for installation: (Required)',
-        validate: nameInput => {if (nameInput){return true} else{console.log('You must enter a description of your project!'); return false;}}
+        validate: nameInput => {if (nameInput){return true} else{console.log('Please enter instructions!'); return false;}}
     },
     {
         type: 'input',
         name: 'usage',
         message: 'How do you use your app? (Required)',
-        validate: nameInput => {if (nameInput){return true} else{console.log('Please enter a value!'); return false;}}
+        validate: nameInput => {if (nameInput){return true} else{console.log('Please enter directions for usage!'); return false;}}
     },
     {
         type: 'input',
@@ -39,22 +39,20 @@ const questions = [
         name: 'license',
         message: 'Which license(s) were used? (Required)',
         choices: ['The MIT license', 'The GPL License', 'Apache License'],
-        validate: nameInput => {if (nameInput){return true} else{console.log('Please enter a value!'); return false;}}
+        validate: nameInput => {if (nameInput){return true} else{console.log('Please select at least one!'); return false;}}
     },
     {
         type: 'input',
         name: 'GitHub',
         message: 'What is your GitHub username? (Required)',
-        validate: nameInput => {if (nameInput){return true} else{console.log('Please enter a value!'); return false;}}
+        validate: nameInput => {if (nameInput){return true} else{console.log('Please enter your username!'); return false;}}
     },
     {
         type: 'input',
         name: 'email',
         message: 'What is your email? (Required)',
-        validate: nameInput => {if (nameInput){return true} else{console.log('Please enter a value!'); return false;}}
+        validate: nameInput => {if (nameInput){return true} else{console.log('Please enter an email!'); return false;}}
     },
-
-
 ];
 
 // TODO: Create a function to write README file
